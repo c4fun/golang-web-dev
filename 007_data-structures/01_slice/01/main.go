@@ -14,9 +14,10 @@ func init() {
 
 func main() {
 
-	sages := []string{"Gandhi", "MLK", "Buddha", "Jesus", "Muhammad"}
+	// sages := []string{"Gandhi", "MLK", "Buddha", "Jesus", "Muhammad"}
+	got := []string{"Danerys", "Little Finger", "Arya Stark", "Jamie Lannister"}
 
-	err := tpl.Execute(os.Stdout, sages)
+	err := tpl.Execute(os.Stdout, got)
 	if err != nil {
 		log.Fatalln(err)
 	}

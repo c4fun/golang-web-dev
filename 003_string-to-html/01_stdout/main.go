@@ -4,6 +4,7 @@ import "fmt"
 
 func main() {
 	name := "Todd McLeod"
+	age := "36"
 
 	tpl := `
 	<!DOCTYPE html>
@@ -14,6 +15,7 @@ func main() {
 	</head>
 	<body>
 	<h1>` + name + `</h1>
+	<h2>` + age + `</h2>
 	</body>
 	</html>
 	`

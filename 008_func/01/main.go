@@ -31,7 +31,11 @@ var fm = template.FuncMap{
 }
 
 func init() {
+	// The following line is called Chaining: template.New() returns a *Template, which can call Funcs, which also returns a *Template; which continues to call ParseFiles and returns (*Template, error), and can be caled by Must
 	tpl = template.Must(template.New("").Funcs(fm).ParseFiles("tpl.gohtml"))
+	// Following 2 lines not working
+	// tpl = template.Must(template.ParseFiles("tpl.gohtml"))
+	// tpl = tpl.Funcs(fm)
 }
 
 func firstThree(s string) string {
