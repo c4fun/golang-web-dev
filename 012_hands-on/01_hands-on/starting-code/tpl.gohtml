@@ -8,8 +8,15 @@
 
 {{range .}}
 
-<!-- PUT YOUR CODE HERE TO SHOW THE DATA-->
+    {{.AcaYear}} {{.Fall.Term}} <br>
+    {{range .Fall.Courses}}
+        {{.Number}} -- {{.Name}} -- {{.Units}} <br>
+    {{end}}
 
+    {{.AcaYear}} {{.Spring.Term}} <br>
+    {{range .Spring.Courses}}
+        {{.Number}} -- {{.Name}} -- {{.Units}} <br>
+    {{end}}
 {{end}}
 
 </body>

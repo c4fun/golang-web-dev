@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>California Hotels</title>
+</head>
+<body>
+
+{{range .}}
+    {{/* Insert your code here to show hotels */}}
+    Name: {{.Name}} <br>
+    Address: {{.Address}} -- {{.City}} City -- {{.Zip}} <br>
+    Region: {{.Region}}
+{{end}}
+
+</body>
+</html>
